@@ -40,8 +40,8 @@ function getRandomItem(arr: string | any[]) {
 }
 
 export default function IndexPage() {
-  const [randomVerse, setRandomVerse] = useState('');
-  const [randomBackgroundImage, setRandomBackgroundImage] = useState('');
+  const [randomVerse, setRandomVerse] = useState('Cast all your anxiety on him because he cares for you. - 1 Peter 5:7');
+  const [randomBackgroundImage, setRandomBackgroundImage] = useState('https://images.pexels.com/photos/8383409/pexels-photo-8383409.jpeg?auto=compress&cs=tinysrgb&w=600');
   const [isTransitioning, setIsTransitioning] = useState(false);
 
   useEffect(() => {
