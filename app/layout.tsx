@@ -5,8 +5,8 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Youtube downloader',
-  description: 'Download',
+  title: 'Random | verse',
+  description: 'Verses',
 }
 
 export default function RootLayout({
