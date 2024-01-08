@@ -52,7 +52,7 @@ export default function IndexPage() {
         setRandomVerse(verse);
         setIsTransitioning(false);
       }, 500); // Delay before changing the verse
-    }, 10000); // Change verse every 30 seconds
+    }, 5000); // Change verse every 30 seconds
     const imageInterval = setInterval(() => {
       setIsTransitioning(true);
       setTimeout(() => {
@@ -60,7 +60,7 @@ export default function IndexPage() {
         setRandomBackgroundImage(image);
         setIsTransitioning(false);
       }, 500); // Delay before changing the image
-    }, 10000); // Change image every 30 seconds
+    }, 5000); // Change image every 30 seconds
 
     return () => {
       clearInterval(verseInterval);
