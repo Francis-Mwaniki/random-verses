@@ -77,7 +77,7 @@ export default function IndexPage() {
         isTransitioning ? 'opacity-0 ease-in transition-opacity duration-300' : 'opacity-50 transition-opacity duration-500'
       }`}
       style={{ backgroundImage: `url(${randomBackgroundImage})
-       transition: opacity 0.5s ease-in;
+       transition: 0.5s ease-in;
       ` }}
     ></div>
     
