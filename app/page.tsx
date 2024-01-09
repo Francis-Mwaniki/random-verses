@@ -51,7 +51,7 @@ export default function IndexPage() {
         const verse = getRandomItem(newTestamentVerses);
         setRandomVerse(verse);
         setIsTransitioning(false);
-      }, 500); // Delay before changing the verse
+      }, 1000); // Delay before changing the verse
     }, 7000); // Change verse every 30 seconds
     const imageInterval = setInterval(() => {
       setIsTransitioning(true);
@@ -59,7 +59,7 @@ export default function IndexPage() {
         const image = getRandomItem(backgroundImages);
         setRandomBackgroundImage(image);
         setIsTransitioning(false);
-      }, 500); // Delay before changing the image
+      }, 1000); // Delay before changing the image
     }, 7000); // Change image every 30 seconds
 
     return () => {
@@ -74,9 +74,11 @@ export default function IndexPage() {
     <div className="flex flex-col items-center justify-center min-h-screen relative overflow-hidden bg-black">
     <div
       className={`fixed top-0 left-0 w-full h-full bg-cover bg-center transition-opacity duration-500 ${
-        isTransitioning ? 'opacity-0' : 'opacity-50'
+        isTransitioning ? 'opacity-0 ease-in transition-opacity duration-300' : 'opacity-50 transition-opacity duration-500'
       }`}
-      style={{ backgroundImage: `url(${randomBackgroundImage})` }}
+      style={{ backgroundImage: `url(${randomBackgroundImage})
+       transition: opacity 0.5s ease-in;
+      ` }}
     ></div>
     
     <div
